@@ -389,11 +389,58 @@
             }
         }
 
+        /* 核心优势 */
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .advantage-item {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            padding: 2.5rem;
+            border-radius: 16px;
+            text-align: center;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .advantage-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 60px rgba(16, 185, 129, 0.2);
+        }
+
+        .advantage-number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .advantage-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--text);
+        }
+
+        .advantage-item p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
         /* 响应式 */
         @media (max-width: 768px) {
             .nav-menu {
-                gap: 1.5rem;
-                font-size: 0.9rem;
+                gap: 1rem;
+                font-size: 0.85rem;
             }
 
             .hero-content h1 {
@@ -409,7 +456,8 @@
             }
 
             .about-content,
-            .services-grid {
+            .services-grid,
+            .advantages-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -419,12 +467,13 @@
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">个体工商户</div>
+            <div class="logo">🏢 专业服务</div>
             <ul class="nav-menu">
                 <li><a href="#home">首页</a></li>
                 <li><a href="#about">关于我们</a></li>
-                <li><a href="#services">服务范围</a></li>
-                <li><a href="#contact">联系我们</a></li>
+                <li><a href="#services">服务项目</a></li>
+                <li><a href="#advantages">核心优势</a></li>
+                <li><a href="#contact">联系方式</a></li>
             </ul>
         </div>
     </nav>
@@ -432,9 +481,9 @@
     <!-- 首页横幅 -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>专业服务 · 诚信经营</h1>
-            <p>致力于为客户提供优质的专业服务</p>
-            <a href="#contact" class="cta-button">联系我们</a>
+            <h1>专业 · 高效 · 可靠</h1>
+            <p>为您提供全方位的专业服务解决方案</p>
+            <a href="#contact" class="cta-button">立即咨询</a>
         </div>
     </section>
 
@@ -444,86 +493,127 @@
             <h2 class="section-title">关于我们</h2>
             <div class="about-content">
                 <div class="about-card">
-                    <div class="icon">📋</div>
-                    <h3>企业信息</h3>
+                    <div class="icon">🏆</div>
+                    <h3>企业资质</h3>
                     <p><strong>类型：</strong>个体工商户</p>
-                    <p><strong>成立时间：</strong>2023年4月27日</p>
+                    <p><strong>成立：</strong>2023年4月</p>
+                    <p><strong>信用代码：</strong>92330329MAEGR8TXXK</p>
                     <p><strong>经营者：</strong>林振辉</p>
                 </div>
                 <div class="about-card">
-                    <div class="icon">✓</div>
-                    <h3>合法经营</h3>
-                    <p>持有正规营业执照</p>
-                    <p>统一社会信用代码：92330329MAEGR8TXXK</p>
+                    <div class="icon">⚡</div>
+                    <h3>服务承诺</h3>
+                    <p>✓ 持证合法经营</p>
+                    <p>✓ 快速响应需求</p>
+                    <p>✓ 专业团队支持</p>
+                    <p>✓ 品质服务保障</p>
                 </div>
                 <div class="about-card">
                     <div class="icon">🎯</div>
-                    <h3>服务理念</h3>
-                    <p>诚信为本，客户至上</p>
-                    <p>专业高效，品质保证</p>
+                    <h3>核心价值</h3>
+                    <p>诚信为本 · 客户至上</p>
+                    <p>专业高效 · 精益求精</p>
+                    <p>创新服务 · 持续改进</p>
+                    <p>合作共赢 · 长期发展</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 服务范围 -->
+    <!-- 服务项目 -->
     <section id="services" class="services">
         <div class="container">
-            <h2 class="section-title">服务范围</h2>
+            <h2 class="section-title">服务项目</h2>
             <div class="services-grid">
                 <div class="service-item">
-                    <h3>🏗️ 建筑服务</h3>
-                    <p>提供专业的建筑相关服务</p>
+                    <h3>🏗️ 工程建设</h3>
+                    <p>专业的建筑工程施工与管理服务，确保项目高质量完成</p>
                 </div>
                 <div class="service-item">
-                    <h3>🔧 维修服务</h3>
-                    <p>各类设备维修与保养</p>
+                    <h3>🔧 设备维护</h3>
+                    <p>提供各类设备的维修、保养及升级改造服务</p>
                 </div>
                 <div class="service-item">
-                    <h3>📦 物流服务</h3>
-                    <p>高效便捷的物流解决方案</p>
+                    <h3>📦 物流配送</h3>
+                    <p>高效便捷的物流运输与仓储管理解决方案</p>
                 </div>
                 <div class="service-item">
                     <h3>🛠️ 技术支持</h3>
-                    <p>专业技术咨询与支持</p>
+                    <p>专业的技术咨询、培训及现场支持服务</p>
                 </div>
                 <div class="service-item">
-                    <h3>📊 咨询服务</h3>
-                    <p>行业咨询与方案设计</p>
+                    <h3>📊 方案设计</h3>
+                    <p>根据客户需求提供专业的解决方案设计与实施</p>
                 </div>
                 <div class="service-item">
                     <h3>🤝 定制服务</h3>
-                    <p>根据客户需求提供定制化服务</p>
+                    <p>灵活的定制化服务，满足您的个性化需求</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 联系我们 -->
+    <!-- 核心优势 -->
+    <section id="advantages" class="advantages">
+        <div class="container">
+            <h2 class="section-title">核心优势</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item">
+                    <div class="advantage-number">01</div>
+                    <h3>专业团队</h3>
+                    <p>拥有经验丰富的专业团队，为您提供高质量服务</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">02</div>
+                    <h3>快速响应</h3>
+                    <p>7×24小时在线服务，快速响应客户需求</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">03</div>
+                    <h3>品质保证</h3>
+                    <p>严格的质量管理体系，确保服务品质</p>
+                </div>
+                <div class="advantage-item">
+                    <div class="advantage-number">04</div>
+                    <h3>价格合理</h3>
+                    <p>透明的价格体系，性价比高，无隐藏费用</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">联系我们</h2>
+            <h2 class="section-title">联系方式</h2>
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
-                            <h3>地址</h3>
-                            <p>浙江省温州市</p>
+                            <h3>公司地址</h3>
+                            <p>浙江省温州市苍南县</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>
                         <div>
-                            <h3>邮箱</h3>
-                            <p>contact@example.com</p>
+                            <h3>电子邮箱</h3>
+                            <p>service@example.com</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">⏰</div>
                         <div>
-                            <h3>营业时间</h3>
-                            <p>周一至周五 9:00 - 18:00</p>
+                            <h3>服务时间</h3>
+                            <p>周一至周日 8:00 - 20:00</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💬</div>
+                        <div>
+                            <h3>在线咨询</h3>
+                            <p>7×24小时在线客服支持</p>
                         </div>
                     </div>
                 </div>
@@ -534,8 +624,9 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2023-2025 个体工商户 版权所有</p>
+            <p>&copy; 2023-2025 个体工商户 · 版权所有</p>
             <p>统一社会信用代码：92330329MAEGR8TXXK</p>
+            <p style="margin-top: 1rem; font-size: 0.9rem;">诚信经营 · 专业服务 · 客户至上</p>
         </div>
     </footer>
 
